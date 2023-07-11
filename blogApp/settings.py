@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-v+r480m@z6_x@hh4w#fq6t8zqrfo8+d@2823@eu7vntl!cz=%o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = [".vercel.app", "127.0.0.1"]
 
 
 # Application definition
@@ -100,7 +100,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',                      
+#         'NAME': 'railway',
 #         'USER': 'postgres',
 #         'PASSWORD': 'cqGiSNnstwaz2lyPFb4N',
 #         'HOST': 'containers-us-west-69.railway.app',
@@ -153,10 +153,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # ]
 
 if DEBUG:
-  STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 else:
-  STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-  STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # EMAIL CONFIGURATION (for contact form)
